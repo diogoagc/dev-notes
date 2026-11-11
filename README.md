@@ -1,54 +1,194 @@
 # Dev Notes
 
-Personal collection of programming notes, standards, best practices, architecture concepts, useful links, and technology references.
+A personal engineering knowledge base for programming notes, standards, best practices, architecture concepts, design patterns, useful links, and technical references worth keeping.
 
-## Contents
+The goal is to keep notes **practical, connected, and easy to revisit**: what a concept solves, why it matters, where it fails, and when to use it.
 
-### Languages
+---
 
-* [PHP](languages/php/index.md)
-* [Go](languages/go/index.md)
-* [Python](languages/python/index.md)
-* [C](languages/c/index.md)
+## Explore
 
-### Frameworks
+### [Languages](languages/index.md)
 
-* [Laravel](frameworks/laravel/index.md)
+- [PHP](languages/php/index.md)
+- [Go](languages/go/index.md)
+- [Python](languages/python/index.md)
+- [C](languages/c/index.md)
 
-### CMS
+### [Frameworks](frameworks/index.md)
 
-* [WordPress](cms/wordpress/index.md)
+- [Laravel](frameworks/laravel/index.md)
+  - Best practices, tooling, quality, security, debugging, performance, and project conventions.
 
-### Databases
+### [CMS](cms/index.md)
 
-* [Databases](databases/index.md)
+- [WordPress](cms/wordpress/index.md)
 
-### Architecture
+### [Databases](databases/index.md)
 
-* [Architecture](architecture/index.md)
+- [Atomicity and Atomic Operations](databases/atomicity.md)
+  - Transactions, all-or-nothing changes, check-then-act races, conditional writes, constraints, and system boundaries.
 
-### Design Patterns
+### [Architecture](architecture/index.md)
 
-* [Design Patterns](design-patterns/index.md)
+- [Idempotency](architecture/idempotency.md)
+  - Safe retries, duplicate execution, idempotency keys, event deduplication, and external side effects.
 
-### DevOps
+### [Concepts](concepts/index.md)
 
-* [DevOps](devops/index.md)
+- [Concurrency & Consistency](concepts/concurrency/index.md)
+  - [Transaction Isolation](concepts/concurrency/isolation.md)
+  - [Optimistic Locking](concepts/concurrency/optimistic-locking.md)
+  - [Pessimistic Locking](concepts/concurrency/pessimistic-locking.md)
 
-### Tools
+### [Design Patterns](design-patterns/index.md)
 
-* [Tools](tools/index.md)
+- [Transactional Outbox Pattern](design-patterns/transactional-outbox.md)
+  - Reliable database + message publishing, at-least-once delivery, and idempotent consumers.
+- [Distributed Systems](design-patterns/distributed-systems/index.md)
+  - [Saga Pattern](design-patterns/distributed-systems/saga.md)
+
+### [DevOps](devops/index.md)
+
+### [Tools](tools/index.md)
+
+---
+
+## How the Notes Connect
+
+Some topics are much easier to understand together:
+
+```text
+Atomicity
+├── What if one operation fails halfway?
+└── Local all-or-nothing guarantees
+
+Transaction Isolation
+├── What if operations run concurrently?
+├── Optimistic Locking
+└── Pessimistic Locking
+
+Idempotency
+└── What if the same operation runs again?
+
+Distributed workflows
+├── Transactional Outbox
+│   └── Reliable database + message publishing
+└── Saga
+    └── Multi-service workflow + compensation
+```
+
+A useful mental model for reliable systems:
+
+> **Atomic locally. Isolate concurrent work. Make boundaries idempotent. Design distributed workflows for partial failure.**
+
+---
+
+## Repository Structure
+
+```text
+dev-notes/
+├── architecture/
+│   ├── idempotency.md
+│   └── index.md
+├── cms/
+│   ├── index.md
+│   └── wordpress/
+│       └── index.md
+├── concepts/
+│   ├── index.md
+│   └── concurrency/
+│       ├── index.md
+│       ├── isolation.md
+│       ├── optimistic-locking.md
+│       └── pessimistic-locking.md
+├── databases/
+│   ├── atomicity.md
+│   └── index.md
+├── design-patterns/
+│   ├── distributed-systems/
+│   │   ├── index.md
+│   │   └── saga.md
+│   ├── index.md
+│   └── transactional-outbox.md
+├── devops/
+│   └── index.md
+├── frameworks/
+│   ├── index.md
+│   └── laravel/
+│       └── index.md
+├── languages/
+│   ├── index.md
+│   ├── c/
+│   │   └── index.md
+│   ├── go/
+│   │   └── index.md
+│   ├── php/
+│   │   └── index.md
+│   └── python/
+│       └── index.md
+├── tools/
+│   └── index.md
+└── README.md
+```
 
 ---
 
 ## Notes Structure
 
-Most sections follow a similar structure:
+Notes do not need to follow a rigid template, but most should answer the questions that make them useful later:
 
-* Standards
-* Best Practices
-* Concepts
-* Useful Links
-* Notes
+- What is it?
+- What problem does it solve?
+- Why does it matter?
+- How does it work?
+- What can go wrong?
+- When should I use it?
+- When should I avoid it?
+- What concepts or patterns are related?
+- What should I remember six months from now?
 
-This repository serves as a personal engineering knowledge base and reference library.
+Common sections include:
+
+- explanation and mental model;
+- practical examples;
+- failure scenarios;
+- trade-offs and limitations;
+- implementation approaches;
+- common mistakes;
+- related notes;
+- key takeaways;
+- useful links.
+
+---
+
+## Conventions
+
+### Language
+
+Notes are written in **English**.
+
+### File Names
+
+Use lowercase kebab-case:
+
+```text
+transactional-outbox.md
+optimistic-locking.md
+pessimistic-locking.md
+```
+
+### Navigation
+
+- Every top-level section has an `index.md`.
+- Subsections that contain several notes also have an `index.md`.
+- The root `README.md` links to every section and note for fast navigation.
+- Related concepts should cross-link to each other where useful.
+
+### Organization
+
+Prefer a small number of broad top-level sections. More specific areas such as **Concurrency** or **Distributed Systems** belong inside those sections rather than becoming new top-level folders unless they grow large enough to justify it.
+
+---
+
+This repository is a living engineering reference: curated notes about concepts and practices worth understanding, not exhaustive documentation for every technology.
