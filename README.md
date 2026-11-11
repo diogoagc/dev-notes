@@ -8,38 +8,38 @@ The goal is to keep notes practical, connected, and easy to revisit: what someth
 
 ## Explore
 
-- **[Languages](languages/index.md)**
-  - [PHP](languages/php/index.md)
-  - [Go](languages/go/index.md)
-  - [Python](languages/python/index.md)
-  - [C](languages/c/index.md)
+**1. [Languages](languages/index.md)**  
+&nbsp;&nbsp;&nbsp;&nbsp;1.1. [PHP](languages/php/index.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;1.2. [Go](languages/go/index.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;1.3. [Python](languages/python/index.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;1.4. [C](languages/c/index.md)
 
-- **[Frameworks](frameworks/index.md)**
-  - [Laravel](frameworks/laravel/index.md)
+**2. [Frameworks](frameworks/index.md)**  
+&nbsp;&nbsp;&nbsp;&nbsp;2.1. [Laravel](frameworks/laravel/index.md)
 
-- **[CMS](cms/index.md)**
-  - [WordPress](cms/wordpress/index.md)
+**3. [CMS](cms/index.md)**  
+&nbsp;&nbsp;&nbsp;&nbsp;3.1. [WordPress](cms/wordpress/index.md)
 
-- **[Databases](databases/index.md)**
-  - [Atomicity and Atomic Operations](databases/atomicity.md)
+**4. [Databases](databases/index.md)**  
+&nbsp;&nbsp;&nbsp;&nbsp;4.1. [Atomicity and Atomic Operations](databases/atomicity.md)
 
-- **[Architecture](architecture/index.md)**
-  - [Idempotency](architecture/idempotency.md)
+**5. [Architecture](architecture/index.md)**  
+&nbsp;&nbsp;&nbsp;&nbsp;5.1. [Idempotency](architecture/idempotency.md)
 
-- **[Concepts](concepts/index.md)**
-  - [Concurrency & Consistency](concepts/concurrency/index.md)
-    - [Transaction Isolation](concepts/concurrency/isolation.md)
-    - [Optimistic Locking](concepts/concurrency/optimistic-locking.md)
-    - [Pessimistic Locking](concepts/concurrency/pessimistic-locking.md)
+**6. [Concepts](concepts/index.md)**  
+&nbsp;&nbsp;&nbsp;&nbsp;6.1. [Concurrency & Consistency](concepts/concurrency/index.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.1.1. [Transaction Isolation](concepts/concurrency/isolation.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.1.2. [Optimistic Locking](concepts/concurrency/optimistic-locking.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.1.3. [Pessimistic Locking](concepts/concurrency/pessimistic-locking.md)
 
-- **[Design Patterns](design-patterns/index.md)**
-  - [Transactional Outbox Pattern](design-patterns/transactional-outbox.md)
-  - [Distributed Systems](design-patterns/distributed-systems/index.md)
-    - [Saga Pattern](design-patterns/distributed-systems/saga.md)
+**7. [Design Patterns](design-patterns/index.md)**  
+&nbsp;&nbsp;&nbsp;&nbsp;7.1. [Transactional Outbox Pattern](design-patterns/transactional-outbox.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;7.2. [Distributed Systems](design-patterns/distributed-systems/index.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.2.1. [Saga Pattern](design-patterns/distributed-systems/saga.md)
 
-- **[DevOps](devops/index.md)**
+**8. [DevOps](devops/index.md)**
 
-- **[Tools](tools/index.md)**
+**9. [Tools](tools/index.md)**
 
 ---
 
